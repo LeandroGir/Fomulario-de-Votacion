@@ -1,9 +1,0 @@
-USE geografia_ch;
-
-CREATE TABLE `enviof` (
-  `nombre` varchar(100),`Alias` varchar(100),`Rut` int(100),`Email` varchar(100),
-`region` varchar(100),`comuna` varchar(100),
-`candidato` varchar(100),`internet` varchar(100),redes_sociales varchar (100));
-
-ALTER TABLE `enviof`
-  ADD UNIQUE KEY `Rut` (`Rut`);
