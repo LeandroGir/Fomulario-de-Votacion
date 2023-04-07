@@ -46,7 +46,10 @@ los datos, como extra agregue al formulario un boton que dice "Consultar votacio
 (http://localhost/Prueba/consulta.php?) y podra visualizar la tabla de votaciones con las personas que 
 sufragaron. Para regresar al formulario de votacion puede darle al boton de atras de su navegador,
 como tambien al voton de "Volver al Formulario" donde se muestran las votaciones. Tambien puede
-verificar que si se guardan en phpMyAdmin, ocupando el query ( SELECT * FROM enviof; )
+verificar que si se guardan en phpMyAdmin, ocupando el query
+(
+USE geografia_ch;
+SELECT * FROM enviof; )
 
 11. Para cerciorarse que todo se cumple, puede ver el codigo de los documentos php y sintaxis que ocupe 
 para el Front End, como tambien Back End. Trate de hacer el codigo lo mas ordenamente. 
