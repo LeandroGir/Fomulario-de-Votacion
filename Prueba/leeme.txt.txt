@@ -1,0 +1,55 @@
+1.  Descargar e Instalar la version XAMPP 8.2.0 "https://www.apachefriends.org/es/download.html", al momento
+de instalar seleccione los componentes que tiene que tener si o si, debe palomear MySQL, PERL y phpMyAdmin. 
+
+2. Iniciar XAMMP Control Panel luego darle Start a Apache y MySQL en la Interfaz de XAMPP Control Panel.
+
+3. Descargar la carpeta de github y copiarla a la ubicacion xampp/htdocs.
+
+3. Ejecutar shell ubicada al lado derecho de la interfaz del "Control Panel".
+
+4. Cambiar direccion de carpeta ocupando: cd mysql/bin
+
+5. Ejecutar siguiente comando para instalacion de mysql en el equipo, con permisos root y sin contraseña: 
+(   mysql -u root -h 127.0.0.1 -p  ) Luego presione Enter al momento de pedir password hasta que permita
+programar en la base de datos, para verificar version de MariaDB utilece el comando:
+(      SELECT version();     )
+Si instalo la misma version de XAMPP 
+debera salirle un recuadro indicandole que la version de la base de datos es 10.4.27-MariaDB.
+
+6. Luego hay 2 opciones al momento de crear las base de datos, ejecutar los comandos SQL por la Shell
+o ejecutar los comandos SQL en phpMyAdmin.
+En mi caso ocupare la interfaz de phpMyAdmin ya que es mucho mas rapido (Me recuerda mucho la interfaz de 
+la aplicacion web Hive, al momento de ejecutar SQL queries).
+
+7. Abrir su navegador preferido e ingresar en la barra de busqueda: 
+(    http://localhost/phpmyadmin/   ), se le abrira la aplicacion web y daremos paso
+a crear y administrar las base de datos MYSQL.
+
+8. Ya estando en la aplicacion web, debera dirigirse a la seccion de SQL para ejecutar consultas
+o queries, para la creacion de base de datos, estos SQL estan en la carpeta "sql para base de datos".
+
+9. Copiar los queries o textos que estan los txt de la carpeta "sql para base datos", comenzando 
+por copiar el contenido del documento "Creacion database y tabla candidato.txt" y pegar el contenido
+en la seccion de de SQL de phpMyAdmin. Darle en el boton de continuar y ya se abra creado la database 
+y un tabla, luego hacer el mismo procedimiento con "Creacion tabla comuna.txt" "Creacion tabla enviof.txt" y 
+"Creacion tabla region.txt".
+
+10. En el navegador que este ocupando, debera cambiar la direccion en la barra de busqueda a:
+(     http://localhost/Prueba/Formulario.php    ) y podra ver el formulario de votacion.
+Esta con todas las validaciones e indicaciones de la prueba de diagnostico. Las validaciones fueron realizadas
+en back end (inputs de Nombre y apellido, Alias,Rut,Email en php y selects de region,comuna,candidato y
+Como se entero de Nosotros, haciendo la correspendiente conexion a la base de datos) y 
+tambien al momento de ejecutar queries en phpMyAdmin(validacion Rut). El formulario con los datos
+completados, seran enviados a la tabla "enviof", creada anteriomente en phpMyAdmin... Ahi se guardaran
+los datos, como extra agregue al formulario un boton que dice "Consultar votaciones",lo mandara a la pagina 
+(http://localhost/Prueba/consulta.php?) y podra visualizar la tabla de votaciones con las personas que 
+sufragaron. Para regresar al formulario de votacion puede darle al boton de atras de su navegador,
+como tambien al voton de "Volver al Formulario" donde se muestran las votaciones. Tambien puede
+verificar que si se guardan en phpMyAdmin, ocupando el query ( SELECT * FROM enviof; )
+
+11. Para cerciorarse que todo se cumple, puede ver el codigo de los documentos php y sintaxis que ocupe 
+para el Front End, como tambien Back End. Trate de hacer el codigo lo mas ordenamente. 
+
+12. Para cerrar todo y deje de funcionar el formulario en linea, debera solo darle al boton de Stop a 
+Apache y MySQL del Control Panel.
+
