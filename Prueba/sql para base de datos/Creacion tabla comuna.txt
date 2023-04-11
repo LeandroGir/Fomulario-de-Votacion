@@ -334,7 +334,7 @@ VALUES
 	('Cisnes'),
 	('Guaitecas'),
 	('Cochrane'),
-	('O\'higgins'),
+	('O Higgins'),
 	('Tortel'),
 	('Coihaique'),
 	('Lago Verde'),
